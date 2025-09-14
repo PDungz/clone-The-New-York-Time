@@ -1,0 +1,32 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "1.0.0",
+  "configurations": [
+    {
+      "name": "main_news_dev",
+      "program": "lib/main_news_dev.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "args": ["--flavor", "news_dev", "--target=lib/main_news_dev.dart"]
+    },
+    {
+      "name": "main_news_stg",
+      "program": "lib/main_news_stg.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "args": ["--flavor", "news_stg", "--target=lib/main_news_stg.dart"]
+    },
+    {
+      "name": "main_news_prod",
+      "program": "lib/main_news_prod.dart",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "args": ["--flavor", "news_prod", "--target=lib/main_news_prod.dart"]
+    }
+  ]
+}

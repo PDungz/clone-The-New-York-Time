@@ -1,0 +1,17 @@
+{
+  "format_date": {
+    "time_ago_second": "%s秒前",
+    "time_ago_minute": "%s分前",
+    "time_ago_hour": "%s時間前",
+    "time_ago_day": "%s日前", 
+    "time_ago_month": "%sヶ月前",
+    "time_ago_year": "%s年前",
+    "time_ago_short_second": "%s秒前",
+    "time_ago_short_minute": "%s分前",
+    "time_ago_short_hour": "%s時前",
+    "time_ago_short_day": "%s日前",
+    "time_ago_short_month": "%sヶ月前", 
+    "time_ago_short_year": "%s年前",
+    "now": "今"
+  }
+}

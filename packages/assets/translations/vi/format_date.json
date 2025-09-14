@@ -1,0 +1,17 @@
+{
+  "format_date": {
+    "time_ago_second": "%s giây trước",
+    "time_ago_minute": "%s phút trước", 
+    "time_ago_hour": "%s giờ trước",
+    "time_ago_day": "%s ngày trước",
+    "time_ago_month": "%s tháng trước",
+    "time_ago_year": "%s năm trước",
+    "time_ago_short_second": "%sg trước",
+    "time_ago_short_minute": "%sp trước",
+    "time_ago_short_hour": "%sh trước", 
+    "time_ago_short_day": "%sd trước",
+    "time_ago_short_month": "%sth trước",
+    "time_ago_short_year": "%sy trước",
+    "now": "bây giờ"
+  }
+}

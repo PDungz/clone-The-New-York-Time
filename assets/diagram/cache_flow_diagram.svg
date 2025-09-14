@@ -1,0 +1,344 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="700" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+    Cache Flow Process - Request Lifecycle
+  </text>
+  
+  <!-- Start: User Request -->
+  <rect x="50" y="80" width="120" height="60" rx="30" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+  <text x="110" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">
+    User Request
+  </text>
+  
+  <!-- Decision: Cache Manager -->
+  <polygon points="250,80 320,110 250,140 180,110" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="250" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#3730a3">
+    Cache Manager
+  </text>
+  
+  <!-- L1 Memory Cache Check -->
+  <rect x="380" y="50" width="140" height="50" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="450" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">
+    L1: Memory Cache
+  </text>
+  <text x="450" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f1d1d">
+    Check Hot Data
+  </text>
+  
+  <!-- L1 Hit -->
+  <rect x="560" y="30" width="100" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">
+    L1 HIT
+  </text>
+  
+  <!-- L1 Miss - Go to L2 -->
+  <rect x="380" y="130" width="140" height="50" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#d97706">
+    L2: Disk Cache
+  </text>
+  <text x="450" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+    Check Warm Data
+  </text>
+  
+  <!-- L2 Hit -->
+  <rect x="560" y="110" width="100" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">
+    L2 HIT
+  </text>
+  
+  <!-- L2 Miss - Go to L3 -->
+  <rect x="380" y="210" width="140" height="50" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="450" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0284c7">
+    L3: Cold Storage
+  </text>
+  <text x="450" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    Check Cold Data
+  </text>
+  
+  <!-- L3 Hit -->
+  <rect x="560" y="190" width="100" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">
+    L3 HIT
+  </text>
+  
+  <!-- L3 Miss - Go to Network -->
+  <rect x="380" y="290" width="140" height="50" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">
+    Network Fetch
+  </text>
+  <text x="450" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#991b1b">
+    API/Server Call
+  </text>
+  
+  <!-- Network Response -->
+  <rect x="560" y="270" width="100" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">
+    Network Data
+  </text>
+  
+  <!-- Cache Population Process -->
+  <rect x="750" y="80" width="200" height="260" rx="15" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="3"/>
+  <text x="850" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0ea5e9">
+    Cache Population
+  </text>
+  
+  <!-- Store in L3 -->
+  <rect x="770" y="120" width="160" height="40" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1"/>
+  <text x="850" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0c4a6e">
+    Store in L3 (Cold)
+  </text>
+  
+  <!-- Store in L2 -->
+  <rect x="770" y="170" width="160" height="40" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="850" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#92400e">
+    Store in L2 (Warm)
+  </text>
+  
+  <!-- Store in L1 -->
+  <rect x="770" y="220" width="160" height="40" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="850" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f1d1d">
+    Store in L1 (Hot)
+  </text>
+  
+  <!-- Eviction Policy -->
+  <rect x="770" y="270" width="160" height="40" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="850" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#5b21b6">
+    Apply Eviction Policy
+  </text>
+  
+  <!-- Return to User -->
+  <rect x="1050" y="80" width="120" height="60" rx="30" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="1110" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">
+    Return Data
+  </text>
+  
+  <!-- Background Processes -->
+  <rect x="50" y="400" width="600" height="300" rx="15" fill="#fefce8" stroke="#eab308" stroke-width="3"/>
+  <text x="350" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#eab308">
+    Background Optimization Processes
+  </text>
+  
+  <!-- Prefetching -->
+  <rect x="80" y="450" width="160" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e">
+    Intelligent Prefetch
+  </text>
+  <text x="160" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400e">
+    • User behavior analysis
+  </text>
+  <text x="160" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400e">
+    • Predictive loading
+  </text>
+  <text x="160" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400e">
+    • Context-aware cache
+  </text>
+  
+  <!-- Cache Cleanup -->
+  <rect x="260" y="450" width="160" height="80" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="340" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#991b1b">
+    Cache Cleanup
+  </text>
+  <text x="340" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#991b1b">
+    • TTL expiration
+  </text>
+  <text x="340" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#991b1b">
+    • LRU eviction
+  </text>
+  <text x="340" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#991b1b">
+    • Size-based cleanup
+  </text>
+  
+  <!-- Performance Monitoring -->
+  <rect x="440" y="450" width="160" height="80" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="520" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0c4a6e">
+    Performance Monitor
+  </text>
+  <text x="520" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0c4a6e">
+    • Hit rate tracking
+  </text>
+  <text x="520" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0c4a6e">
+    • Response time metrics
+  </text>
+  <text x="520" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0c4a6e">
+    • Resource usage
+  </text>
+  
+  <!-- Background Sync -->
+  <rect x="80" y="550" width="160" height="80" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="160" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#166534">
+    Background Sync
+  </text>
+  <text x="160" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    • Stale data refresh
+  </text>
+  <text x="160" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    • Delta updates
+  </text>
+  <text x="160" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    • Conflict resolution
+  </text>
+  
+  <!-- Cache Warming -->
+  <rect x="260" y="550" width="160" height="80" rx="10" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="340" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">
+    Cache Warming
+  </text>
+  <text x="340" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6">
+    • Popular content
+  </text>
+  <text x="340" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6">
+    • Seasonal data
+  </text>
+  <text x="340" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6">
+    • User preferences
+  </text>
+  
+  <!-- Storage Optimization -->
+  <rect x="440" y="550" width="160" height="80" rx="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="2"/>
+  <text x="520" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#be185d">
+    Storage Optimize
+  </text>
+  <text x="520" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#be185d">
+    • Compression
+  </text>
+  <text x="520" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#be185d">
+    • Deduplication
+  </text>
+  <text x="520" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#be185d">
+    • Format optimization
+  </text>
+  
+  <!-- Decision Flow Arrows -->
+  <!-- User Request to Cache Manager -->
+  <path d="M 170 110 L 180 110" stroke="#4f46e5" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Cache Manager to L1 -->
+  <path d="M 320 110 L 380 75" stroke="#4f46e5" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="340" y="85" font-family="Arial, sans-serif" font-size="10" fill="#4f46e5">Check L1</text>
+  
+  <!-- L1 Hit to Return -->
+  <path d="M 520 50 L 1050 50 L 1050 80" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="780" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#16a34a">
+    L1 Hit (~90% cases)
+  </text>
+  
+  <!-- L1 Miss to L2 -->
+  <path d="M 450 100 L 450 130" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="480" y="120" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">L1 Miss</text>
+  
+  <!-- L2 Hit to Cache Population and Return -->
+  <path d="M 520 130 L 750 130" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="630" y="125" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">L2 Hit - Promote to L1</text>
+  
+  <!-- L2 Miss to L3 -->
+  <path d="M 450 180 L 450 210" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="480" y="200" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">L2 Miss</text>
+  
+  <!-- L3 Hit to Cache Population -->
+  <path d="M 520 210 L 750 210" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="630" y="205" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">L3 Hit - Promote</text>
+  
+  <!-- L3 Miss to Network -->
+  <path d="M 450 260 L 450 290" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="480" y="280" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">L3 Miss</text>
+  
+  <!-- Network to Cache Population -->
+  <path d="M 520 290 L 750 290" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="630" y="285" font-family="Arial, sans-serif" font-size="10" fill="#16a34a">Network Data</text>
+  
+  <!-- Cache Population to Return -->
+  <path d="M 950 200 L 1050 200 L 1050 140" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Performance Metrics Box -->
+  <rect x="750" y="400" width="300" height="280" rx="15" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="900" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#334155">
+    Cache Performance Metrics
+  </text>
+  
+  <!-- Hit Rate Chart -->
+  <rect x="770" y="450" width="260" height="50" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="780" y="470" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e">Cache Hit Rate Distribution:</text>
+  
+  <!-- Hit rate bars -->
+  <rect x="780" y="480" width="80" height="15" fill="#dc2626"/>
+  <text x="785" y="492" font-family="Arial, sans-serif" font-size="10" fill="white">L1: 60%</text>
+  
+  <rect x="870" y="480" width="60" height="15" fill="#d97706"/>
+  <text x="875" y="492" font-family="Arial, sans-serif" font-size="10" fill="white">L2: 25%</text>
+  
+  <rect x="940" y="480" width="40" height="15" fill="#0284c7"/>
+  <text x="945" y="492" font-family="Arial, sans-serif" font-size="10" fill="white">L3: 10%</text>
+  
+  <rect x="990" y="480" width="30" height="15" fill="#ef4444"/>
+  <text x="995" y="492" font-family="Arial, sans-serif" font-size="9" fill="white">Net: 5%</text>
+  
+  <!-- Response Time Chart -->
+  <rect x="770" y="520" width="260" height="60" rx="5" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="780" y="540" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0c4a6e">Response Time:</text>
+  
+  <text x="780" y="555" font-family="Arial, sans-serif" font-size="11" fill="#0c4a6e">• L1 Memory: &lt;1ms (Hot path)</text>
+  <text x="780" y="570" font-family="Arial, sans-serif" font-size="11" fill="#0c4a6e">• L2 Disk: &lt;10ms (SSD access)</text>
+  
+  <!-- Storage Usage -->
+  <rect x="770" y="590" width="260" height="80" rx="5" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="780" y="610" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">Storage Optimization:</text>
+  
+  <text x="780" y="625" font-family="Arial, sans-serif" font-size="11" fill="#166534">• Auto-cleanup expired data</text>
+  <text x="780" y="640" font-family="Arial, sans-serif" font-size="11" fill="#166534">• Intelligent compression</text>
+  <text x="780" y="655" font-family="Arial, sans-serif" font-size="11" fill="#166534">• Predictive eviction</text>
+  
+  <!-- Mobile Specific Considerations -->
+  <rect x="1100" y="400" width="250" height="280" rx="15" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="1225" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ca8a04">
+    Mobile Optimizations
+  </text>
+  
+  <!-- Battery Optimization -->
+  <rect x="1120" y="450" width="210" height="45" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1130" y="470" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e">Battery Aware:</text>
+  <text x="1130" y="485" font-family="Arial, sans-serif" font-size="10" fill="#92400e">Reduce cache operations on low battery</text>
+  
+  <!-- Memory Pressure -->
+  <rect x="1120" y="505" width="210" height="45" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1"/>
+  <text x="1130" y="525" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f1d1d">Memory Pressure:</text>
+  <text x="1130" y="540" font-family="Arial, sans-serif" font-size="10" fill="#7f1d1d">Dynamic cache size adjustment</text>
+  
+  <!-- Network Awareness -->
+  <rect x="1120" y="560" width="210" height="45" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1"/>
+  <text x="1130" y="580" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#075985">Network Adaptive:</text>
+  <text x="1130" y="595" font-family="Arial, sans-serif" font-size="10" fill="#075985">WiFi vs Mobile data strategies</text>
+  
+  <!-- Platform Integration -->
+  <rect x="1120" y="615" width="210" height="45" rx="5" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="1130" y="635" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">Platform Native:</text>
+  <text x="1130" y="650" font-family="Arial, sans-serif" font-size="10" fill="#5b21b6">iOS NSCache, Android LruCache</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4f46e5"/>
+    </marker>
+  </defs>
+  
+  <!-- Bottom Legend -->
+  <rect x="50" y="750" width="600" height="120" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1"/>
+  <text x="350" y="775" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155">
+    Cache Strategy Summary
+  </text>
+  
+  <text x="70" y="795" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">
+    Hot Path (L1): 60% hits, &lt;1ms - Recent/frequent data in memory
+  </text>
+  <text x="70" y="815" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#d97706">
+    Warm Path (L2): 25% hits, &lt;10ms - Persistent data on fast storage
+  </text>
+  <text x="70" y="835" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0284c7">
+    Cold Path (L3): 10% hits, &lt;50ms - Offline content, long-term storage
+  </text>
+  <text x="70" y="855" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">
+    Network Path: 5% misses, 50-500ms - Fresh data from remote servers
+  </text>
+</svg>

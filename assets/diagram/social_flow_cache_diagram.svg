@@ -1,0 +1,409 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="800" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+    Social Media Cache Flow - Facebook-like Implementation
+  </text>
+  
+  <!-- User Feed Request -->
+  <rect x="50" y="80" width="140" height="60" rx="30" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+  <text x="120" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">
+    User Scrolls Feed
+  </text>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#991b1b">
+    (Page 1, Posts 1-20)
+  </text>
+  
+  <!-- Feed Cache Manager -->
+  <rect x="250" y="80" width="180" height="80" rx="15" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="340" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3730a3">
+    Feed Cache Manager
+  </text>
+  <text x="340" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3730a3">
+    Check Hot Memory Cache
+  </text>
+  <text x="340" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3730a3">
+    TTL: 5-15 minutes
+  </text>
+  
+  <!-- Feed Cache Hit -->
+  <rect x="480" y="60" width="120" height="50" rx="25" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">
+    Cache HIT
+  </text>
+  
+  <!-- SQLite Database Check -->
+  <rect x="480" y="130" width="120" height="70" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="540" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#d97706">
+    SQLite Cache
+  </text>
+  <text x="540" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+    Paginated feeds
+  </text>
+  <text x="540" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+    TTL: 6-24 hours
+  </text>
+  
+  <!-- Network API Call -->
+  <rect x="480" y="220" width="120" height="60" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">
+    API Call
+  </text>
+  <text x="540" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#991b1b">
+    /feed?page=1&amp;limit=20
+  </text>
+  
+  <!-- Post Processing Pipeline -->
+  <rect x="680" y="80" width="220" height="200" rx="15" fill="#f0fdf4" stroke="#22c55e" stroke-width="3"/>
+  <text x="790" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#166534">
+    Post Processing Pipeline
+  </text>
+  
+  <!-- Individual Post Cache -->
+  <rect x="700" y="120" width="180" height="35" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="790" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    Cache Individual Posts
+  </text>
+  
+  <!-- Profile Image Cache -->
+  <rect x="700" y="160" width="180" height="35" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="790" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    Cache Profile Images (Thumbnails)
+  </text>
+  
+  <!-- Media Content Processing -->
+  <rect x="700" y="200" width="180" height="35" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="790" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    Process Media Content
+  </text>
+  
+  <!-- Engagement Analysis -->
+  <rect x="700" y="240" width="180" height="35" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="790" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    Analyze Engagement Scores
+  </text>
+  
+  <!-- Media Cache System -->
+  <rect x="950" y="80" width="280" height="350" rx="15" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="1090" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400e">
+    Media Cache System
+  </text>
+  
+  <!-- Image Cache -->
+  <rect x="970" y="120" width="240" height="80" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="1090" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">
+    Image Cache (Multi-Resolution)
+  </text>
+  <text x="1090" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f1d1d">
+    • Thumbnail: 150x150 (30% quality)
+  </text>
+  <text x="1090" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f1d1d">
+    • Medium: 500x500 (70% quality)
+  </text>
+  <text x="1090" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f1d1d">
+    • Full: Original (100% quality)
+  </text>
+  
+  <!-- Video Cache -->
+  <rect x="970" y="210" width="240" height="80" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="1090" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0284c7">
+    Video Cache (Adaptive Quality)
+  </text>
+  <text x="1090" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#075985">
+    • 240p: Low bandwidth/battery
+  </text>
+  <text x="1090" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#075985">
+    • 480p: Medium quality
+  </text>
+  <text x="1090" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#075985">
+    • 720p: High quality (WiFi)
+  </text>
+  
+  <!-- Story Cache -->
+  <rect x="970" y="300" width="240" height="60" rx="10" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="1090" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">
+    Story Cache (24h TTL)
+  </text>
+  <text x="1090" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6">
+    Ephemeral content with auto-cleanup
+  </text>
+  
+  <!-- Profile Cache -->
+  <rect x="970" y="370" width="240" height="50" rx="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="2"/>
+  <text x="1090" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#be185d">
+    Profile Cache (Long-term)
+  </text>
+  <text x="1090" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#be185d">
+    User profiles, friends list
+  </text>
+  
+  <!-- Intelligent Caching Logic -->
+  <rect x="50" y="320" width="600" height="280" rx="15" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="3"/>
+  <text x="350" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0ea5e9">
+    Intelligent Caching Logic
+  </text>
+  
+  <!-- Engagement-Based Priority -->
+  <rect x="80" y="360" width="180" height="90" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="170" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0284c7">
+    Engagement Priority
+  </text>
+  <text x="170" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    • Viral: 10k+ likes → Critical
+  </text>
+  <text x="170" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    • Friends: Following → High
+  </text>
+  <text x="170" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    • Fresh: &lt;1h old → Medium
+  </text>
+  
+  <!-- User Behavior Analysis -->
+  <rect x="280" y="360" width="180" height="90" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="370" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#22c55e">
+    User Behavior
+  </text>
+  <text x="370" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">
+    • Scroll patterns
+  </text>
+  <text x="370" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">
+    • Interaction history
+  </text>
+  <text x="370" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#166534">
+    • Time-based preferences
+  </text>
+  
+  <!-- Predictive Loading -->
+  <rect x="480" y="360" width="150" height="90" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="555" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">
+    Predictive Loading
+  </text>
+  <text x="555" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+    • Next 5-10 posts
+  </text>
+  <text x="555" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+    • Related content
+  </text>
+  <text x="555" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">
+    • Trending topics
+  </text>
+  
+  <!-- Cache Invalidation -->
+  <rect x="80" y="470" width="180" height="70" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="170" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">
+    Cache Invalidation
+  </text>
+  <text x="170" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#991b1b">
+    • Real-time updates
+  </text>
+  <text x="170" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#991b1b">
+    • User blocks/unfriends
+  </text>
+  
+  <!-- Background Sync -->
+  <rect x="280" y="470" width="180" height="70" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="370" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7c3aed">
+    Background Sync
+  </text>
+  <text x="370" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5b21b6">
+    • Stale-while-revalidate
+  </text>
+  <text x="370" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#5b21b6">
+    • Delta updates
+  </text>
+  
+  <!-- Memory Management -->
+  <rect x="480" y="470" width="150" height="70" rx="10" fill="#fdf2f8" stroke="#ec4899" stroke-width="2"/>
+  <text x="555" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ec4899">
+    Memory Management
+  </text>
+  <text x="555" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#be185d">
+    • Low memory warnings
+  </text>
+  <text x="555" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#be185d">
+    • Progressive cleanup
+  </text>
+  
+  <!-- Performance Metrics -->
+  <rect x="1270" y="80" width="280" height="400" rx="15" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="1410" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155">
+    Performance Metrics
+  </text>
+  
+  <!-- Feed Load Time -->
+  <rect x="1290" y="120" width="240" height="50" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="1410" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">
+    Feed Load Time
+  </text>
+  <text x="1410" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    Cache Hit: &lt;100ms | Network: 500-2000ms
+  </text>
+  
+  <!-- Memory Usage -->
+  <rect x="1290" y="180" width="240" height="50" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1410" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e">
+    Memory Usage
+  </text>
+  <text x="1410" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400e">
+    Hot: 50MB | Warm: 200MB | Cold: 1GB
+  </text>
+  
+  <!-- Cache Hit Rate -->
+  <rect x="1290" y="240" width="240" height="70" rx="5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1"/>
+  <text x="1410" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0284c7">
+    Cache Hit Rates
+  </text>
+  <text x="1410" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    Feed: 85% | Images: 92% | Videos: 60%
+  </text>
+  <text x="1410" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    Stories: 95% | Profiles: 98%
+  </text>
+  <text x="1410" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#075985">
+    Overall: 88% hit rate
+  </text>
+  
+  <!-- Network Savings -->
+  <rect x="1290" y="320" width="240" height="50" rx="5" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="1410" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">
+    Network Savings
+  </text>
+  <text x="1410" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">
+    75% reduction in API calls
+  </text>
+  
+  <!-- Battery Impact -->
+  <rect x="1290" y="380" width="240" height="50" rx="5" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="1410" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">
+    Battery Impact
+  </text>
+  <text x="1410" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#991b1b">
+    &lt;3% additional consumption
+  </text>
+  
+  <!-- User Experience Impact -->
+  <rect x="1290" y="440" width="240" height="50" rx="5" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="1410" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">
+    User Experience
+  </text>
+  <text x="1410" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5b21b6">
+    95% instant content loading
+  </text>
+  
+  <!-- Flow Arrows -->
+  <!-- User to Feed Manager -->
+  <path d="M 190 110 L 250 110" stroke="#4f46e5" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feed Manager branching -->
+  <path d="M 430 100 L 480 85" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="440" y="80" font-family="Arial, sans-serif" font-size="9" fill="#16a34a">Hit</text>
+  
+  <path d="M 430 120 L 480 155" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="440" y="150" font-family="Arial, sans-serif" font-size="9" fill="#d97706">SQLite</text>
+  
+  <path d="M 430 140 L 480 240" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="440" y="200" font-family="Arial, sans-serif" font-size="9" fill="#ef4444">Miss</text>
+  
+  <!-- To Processing Pipeline -->
+  <path d="M 600 200 L 680 200" stroke="#22c55e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="630" y="195" font-family="Arial, sans-serif" font-size="10" fill="#22c55e">Process Posts</text>
+  
+  <!-- To Media Cache -->
+  <path d="M 900 200 L 950 200" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="920" y="195" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b">Media</text>
+  
+  <!-- To Performance Metrics -->
+  <path d="M 1230 250 L 1270 250" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="1240" y="245" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Metrics</text>
+  
+  <!-- Cache Strategy Legend -->
+  <rect x="50" y="650" width="800" height="180" rx="15" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+  <text x="450" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#334155">
+    Social Media Cache Strategy Summary
+  </text>
+  
+  <!-- Strategy Points -->
+  <text x="70" y="700" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">
+    1. Feed Caching: Multi-layer with hot memory (5-15min), warm SQLite (6-24h), background refresh
+  </text>
+  
+  <text x="70" y="720" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#d97706">
+    2. Media Optimization: Progressive loading (thumbnail → full), quality adaptation, selective video cache
+  </text>
+  
+  <text x="70" y="740" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0284c7">
+    3. Engagement-Based Priority: Viral content (critical), friends' posts (high), fresh content (medium)
+  </text>
+  
+  <text x="70" y="760" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#22c55e">
+    4. Predictive Loading: Scroll direction analysis, user behavior patterns, context-aware prefetch
+  </text>
+  
+  <text x="70" y="780" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">
+    5. Offline Support: Seamless degradation, queued actions, 100% cached content availability
+  </text>
+  
+  <text x="70" y="800" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#059669">
+    6. Performance: 88% hit rate, &lt;100ms cached response, 75% network reduction, &lt;3% battery impact
+  </text>
+  
+  <!-- Real-time Updates Section -->
+  <rect x="900" y="650" width="650" height="180" rx="15" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="1225" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400e">
+    Real-time Updates and Sync
+  </text>
+  
+  <!-- WebSocket Updates -->
+  <rect x="920" y="690" width="150" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="995" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">
+    WebSocket Updates
+  </text>
+  <text x="995" y="725" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    • New posts push
+  </text>
+  <text x="995" y="738" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    • Live reactions
+  </text>
+  
+  <!-- Pull-to-Refresh -->
+  <rect x="1090" y="690" width="150" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1165" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">
+    Pull-to-Refresh
+  </text>
+  <text x="1165" y="725" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    • Force cache refresh
+  </text>
+  <text x="1165" y="738" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    • Merge new content
+  </text>
+  
+  <!-- Background Sync -->
+  <rect x="1260" y="690" width="130" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1325" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">
+    Background Sync
+  </text>
+  <text x="1325" y="725" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    • Stale refresh
+  </text>
+  <text x="1325" y="738" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    • Delta updates
+  </text>
+  
+  <!-- Conflict Resolution -->
+  <rect x="1020" y="760" width="190" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="1115" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#92400e">
+    Conflict Resolution
+  </text>
+  <text x="1115" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#92400e">
+    Last-write-wins with timestamp comparison
+  </text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4f46e5"/>
+    </marker>
+  </defs>
+</svg>

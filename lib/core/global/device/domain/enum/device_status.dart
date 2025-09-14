@@ -1,0 +1,1 @@
+enum DeviceStatus { ACTIVE, INACTIVE, BLOCKED, PENDING, DELETED }

@@ -1,0 +1,17 @@
+{
+  "format_date": {
+    "time_ago_second": "%s seconds ago",
+    "time_ago_minute": "%s minutes ago",
+    "time_ago_hour": "%s hours ago", 
+    "time_ago_day": "%s days ago",
+    "time_ago_month": "%s months ago",
+    "time_ago_year": "%s years ago",
+    "time_ago_short_second": "%ss ago",
+    "time_ago_short_minute": "%sm ago",
+    "time_ago_short_hour": "%sh ago",
+    "time_ago_short_day": "%sd ago", 
+    "time_ago_short_month": "%smo ago",
+    "time_ago_short_year": "%sy ago",
+    "now": "now"
+  }
+}

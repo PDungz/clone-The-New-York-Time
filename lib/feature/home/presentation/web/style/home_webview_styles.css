@@ -1,0 +1,85 @@
+/* Home WebView Styles - Extracted from original file */
+
+/* Original body styles */
+body {
+  background-color: var(--theme-background) !important;
+  color: var(--theme-text-primary) !important;
+  font-family: var(--theme-font-body) !important;
+}
+
+/* Original heading styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-text-primary) !important;
+  font-family: var(--theme-font-headline) !important;
+}
+
+/* Original paragraph styles */
+p {
+  color: var(--theme-text-primary) !important;
+}
+
+/* Original link styles */
+a {
+  color: var(--theme-nyt-blue) !important;
+}
+
+a:visited {
+  color: var(--theme-link-visited) !important;
+}
+
+a:hover {
+  color: var(--theme-nyt-accent) !important;
+  text-decoration: underline !important;
+}
+
+/* Original blockquote styles */
+blockquote {
+  background-color: var(--theme-card) !important;
+  padding: 16px !important;
+  margin: 16px 0 !important;
+  font-style: italic !important;
+}
+
+/* Original code styles */
+pre, code {
+  background-color: var(--theme-card) !important;
+  color: var(--theme-text-secondary) !important;
+  font-family: monospace !important;
+  padding: 8px !important;
+}
+
+/* Original image styles */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Original table styles */
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 16px 0 !important;
+}
+
+th, td {
+  border: 1px solid var(--theme-divider) !important;
+  padding: 8px !important;
+  text-align: left !important;
+}
+
+th {
+  background-color: var(--theme-card) !important;
+}
+
+/* Original custom classes for news content */
+.breaking-news {
+  background-color: var(--theme-breaking-news) !important;
+  color: white !important;
+  padding: 8px 12px !important;
+}
+
+.premium-content {
+  background: linear-gradient(135deg, var(--theme-premium-start), var(--theme-premium-end)) !important;
+  color: white !important;
+  padding: 16px !important;
+}
